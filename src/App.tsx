@@ -23,7 +23,7 @@ const router = createBrowserRouter([
   },
   // Education routes
   {
-    path: "/edu/primartherwil",
+    path: "/edu/primtherwil",
     element: <PrimarschuleTherwil />
   },
   {

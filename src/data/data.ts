@@ -35,29 +35,29 @@ export const data: Data = {
       tags: ["Therwil, Switzerland", "July 2014 - June 2020"],
       bigTags: [],
       text: "Completed primary education at Primarschule Therwil, Switzerland.",
-      link: "/edu/primartherwil"
+      link: "/edu/primtherwil"
     }
   ],
 
   competitions: [
     {
-      title: "NZMO (New Zealand Mathematical Olympiad)",
+      title: "New Zealand Mathematical Olympiad",
       tags: ["2025", "Round 1 Completed"],
-      bigTags: [],
+      bigTags: ["Math"],
       text: "Successfully completed Round 1 and ready for Round 2 on 5th September.",
       link: "/comp/nzmo"
     },
     {
-      title: "AMC (Australian Mathematics Competition)",
+      title: "Australian Mathematics Competition",
       tags: ["2025", "No Placement Yet"],
-      bigTags: [],
+      bigTags: ["Math"],
       text: "Details coming soon",
       link: "/comp/amc"
     },
     {
-      title: "UC Engineering Challenge",
+      title: "University of Canterbury Engineering Challenge",
       tags: ["2025", "No Placement Yet"],
-      bigTags: [],
+      bigTags: ["Engineering", "LaTeX"],
       text: "Details coming soon",
       link: "/comp/uceng"
     }
