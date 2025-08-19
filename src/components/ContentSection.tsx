@@ -17,8 +17,8 @@ export const ContentSection: React.FC<ContentSectionProps> = ({ sectionId, title
         </h2>
         <div className="space-y-6 sm:space-y-8">
           {items.map((item, index) => (
-            <Card key={index}>
-              <CardTitle href={item.link}>
+            <Card key={index} href={item.link}>
+              <CardTitle>
                 {item.title}
               </CardTitle>
               {item.tags.length > 0 && (

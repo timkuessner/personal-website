@@ -1,109 +1,65 @@
-import React, { useState, useEffect } from 'react';
-import { Navigation } from './components/Navigation';
-import { AboutSection } from './components/AboutSection';
-import { ContentSection } from './components/ContentSection';
-import { ContactSection } from './components/ContactSection';
-import { data } from './data/data';
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { HomePage } from './pages/HomePage';
 
-type SectionId = 'about' | 'education' | 'competitions' | 'projects' | 'contact';
+// Education pages
+import { PrimarschuleTherwil } from './pages/education/PrimarschuleTherwil';
+import { SekundarschuleTherwil } from './pages/education/SekundarschuleTherwil';
+import { GymnasiumOberwil } from './pages/education/GymnasiumOberwil';
+import { NaylandCollege } from './pages/education/NaylandCollege';
+
+// Competition pages
+import { NewZealandMathematicalOlympiad } from './pages/competitions/NewZealandMathematicalOlympiad';
+import { AustralianMathematicsCompetition } from './pages/competitions/AustralianMathematicsCompetition';
+import { UniversityOfCanterburyEngineeringChallenge } from './pages/competitions/UniversityOfCanterburyEngineeringChallenge';
+
+// Project pages
+import { TeReoMaoriRevitalizationGame } from './pages/projects/TeReoMaoriRevitalizationGame';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />
+  },
+  // Education routes
+  {
+    path: "/edu/primartherwil",
+    element: <PrimarschuleTherwil />
+  },
+  {
+    path: "/edu/sektherwil",
+    element: <SekundarschuleTherwil />
+  },
+  {
+    path: "/edu/gymoberwil",
+    element: <GymnasiumOberwil />
+  },
+  {
+    path: "/edu/naycol",
+    element: <NaylandCollege />
+  },
+  // Competition routes
+  {
+    path: "/comp/nzmo",
+    element: <NewZealandMathematicalOlympiad />
+  },
+  {
+    path: "/comp/amc",
+    element: <AustralianMathematicsCompetition />
+  },
+  {
+    path: "/comp/uceng",
+    element: <UniversityOfCanterburyEngineeringChallenge />
+  },
+  // Project routes
+  {
+    path: "/proj/tereo",
+    element: <TeReoMaoriRevitalizationGame />
+  }
+]);
 
 export const App: React.FC = () => {
-  const [activeSection, setActiveSection] = useState<SectionId>('about');
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-
-  const scrollToSection = (sectionId: string): void => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const isMobile = window.innerWidth <= 768;
-      
-      if (isMobile) {
-        const navHeight = 80;
-        const offsetTop = element.offsetTop - navHeight;
-        
-        window.scrollTo({ 
-          top: Math.max(0, offsetTop),
-          behavior: 'smooth'
-        });
-      } else {
-        element.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    }
-    setIsMobileMenuOpen(false);
-  };
-
-  const handleNavClick = (sectionId: string): void => {
-    setActiveSection(sectionId as SectionId);
-    scrollToSection(sectionId);
-  };
-
-  useEffect(() => {
-    const handleScroll = (): void => {
-      const sections: SectionId[] = ['about', 'education', 'competitions', 'projects', 'contact'];
-      const scrollY = window.scrollY;
-      const scrollPosition = scrollY + window.innerHeight;
-      const pageHeight = document.documentElement.scrollHeight;
-
-      // Check if user is at the bottom of the page
-      if (scrollPosition >= pageHeight - 10) {
-        setActiveSection('contact');
-        return;
-      }
-
-      // Loop through sections in reverse to find the last visible one
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          if (scrollY + 100 >= offsetTop) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-    <div className="min-h-screen bg-black text-white font-sans">
-      <Navigation 
-        activeSection={activeSection}
-        isMobileMenuOpen={isMobileMenuOpen}
-        setIsMobileMenuOpen={setIsMobileMenuOpen}
-        onNavClick={handleNavClick}
-      />
-      
-      <main className="pt-16 md:pt-20">
-        <AboutSection />
-        
-        <ContentSection 
-          sectionId="education"
-          title="Education"
-          items={data.education}
-        />
-        
-        <ContentSection 
-          sectionId="competitions"
-          title="Math Competitions"
-          items={data.competitions}
-        />
-        
-        <ContentSection 
-          sectionId="projects"
-          title="Projects"
-          items={data.projects}
-        />
-        
-        <ContactSection />
-      </main>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

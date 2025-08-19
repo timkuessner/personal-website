@@ -14,28 +14,28 @@ export const data: Data = {
       tags: ["Nelson, New Zealand", "July 2024 - December 2025"],
       bigTags: [],
       text: "Currently studying at Nayland College in Nelson, New Zealand as an exchange student. Completing the NCEA qualification and finishing high school before starting university in Europe.",
-      link: "https://nayland.school.nz"
+      link: "/edu/naycol"
     },
     {
       title: "Gymnasium Oberwil",
       tags: ["Oberwil, Switzerland", "July 2023 - June 2024"],
       bigTags: [],
       text: "Attended Gymnasium Oberwil for advanced secondary education, focusing on Schwerpunktfach Anwendungen der Mathematik und Physik (Main focus: Applications of Mathematics and Physics).",
-      link: "https://www.gymoberwil.ch"
+      link: "/edu/gymoberwil"
     },
     {
       title: "Sekundarschule Therwil",
       tags: ["Therwil, Switzerland", "July 2020 - June 2023"],
       bigTags: [],
       text: "Completed secondary education at Sekundarschule Therwil in the Leistungszug P (advanced performance track).",
-      link: "https://www.sektherwil.ch"
+      link: "/edu/sektherwil"
     },
     {
       title: "Primarschule Therwil",
       tags: ["Therwil, Switzerland", "July 2014 - June 2020"],
       bigTags: [],
       text: "Completed primary education at Primarschule Therwil, Switzerland.",
-      link: "https://www.primartherwil.ch"
+      link: "/edu/primartherwil"
     }
   ],
 
@@ -45,21 +45,21 @@ export const data: Data = {
       tags: ["2025", "Round 1 Completed"],
       bigTags: [],
       text: "Successfully completed Round 1 and ready for Round 2 on 5th September.",
-      link: "https://www.mathsolympiad.org.nz/"
+      link: "/comp/nzmo"
     },
     {
       title: "AMC (Australian Mathematics Competition)",
       tags: ["2025", "No Placement Yet"],
       bigTags: [],
       text: "Details coming soon",
-      link: "https://amt.edu.au/amc"
+      link: "/comp/amc"
     },
     {
       title: "UC Engineering Challenge",
       tags: ["2025", "No Placement Yet"],
       bigTags: [],
       text: "Details coming soon",
-      link: "https://sites.google.com/view/ucengineeringchallenge?usp=sharing"
+      link: "/comp/uceng"
     }
   ],
 
@@ -69,7 +69,7 @@ export const data: Data = {
       tags: ["Coming 2025"],
       bigTags: ["Godot", "GDScript"],
       text: "A game that makes learning and using Te Reo Māori fun and engaging while supporting its revitalization.",
-      link: "https://timkuessner.itch.io/te-reo-maori-revitalization-game"
+      link: "/proj/tereo"
     }
   ],
 
