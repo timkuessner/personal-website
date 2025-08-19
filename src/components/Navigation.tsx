@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu, X } from 'lucide-react';
-import type { NavItem } from './types';
+import type { NavItem } from '../data/types';
 
 interface NavigationProps {
   activeSection: string;

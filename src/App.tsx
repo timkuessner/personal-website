@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Navigation } from './Navigation';
-import { AboutSection } from './AboutSection';
-import { ContentSection } from './ContentSection';
-import { ContactSection } from './ContactSection';
-import { data } from './data';
+import { Navigation } from './components/Navigation';
+import { AboutSection } from './components/AboutSection';
+import { ContentSection } from './components/ContentSection';
+import { ContactSection } from './components/ContactSection';
+import { data } from './data/data';
 
 type SectionId = 'about' | 'education' | 'competitions' | 'projects' | 'contact';
 

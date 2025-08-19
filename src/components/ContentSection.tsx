@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardTitle, CardDescription } from './Card';
-import type { ContentItem } from './types';
+import type { ContentItem } from '../data/types';
 
 interface ContentSectionProps {
   sectionId: string;
