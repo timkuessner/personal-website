@@ -57,7 +57,7 @@ export const data: Data = {
     {
       title: "University of Canterbury Engineering Challenge",
       tags: ["2025", "No Placement Yet"],
-      bigTags: ["Engineering", "LaTeX"],
+      bigTags: ["Team", "Engineering", "LaTeX"],
       text: "Details coming soon",
       link: "/comp/uceng"
     }
