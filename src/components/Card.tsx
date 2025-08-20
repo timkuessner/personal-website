@@ -15,7 +15,7 @@ interface CardDescriptionProps {
 }
 
 export const Card: React.FC<CardProps> = ({ href, children }) => {
-  const cardClasses = "border border-gray-700 p-6 sm:p-8 rounded-xl bg-white/[0.02] hover:border-gray-600 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/20 transition-all duration-300 block";
+  const cardClasses = "border-2 border-gray-700 p-6 sm:p-8 rounded-xl bg-white/[0.02] hover:border-gray-600 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/20 transition-all duration-300 block";
   
   if (!href) {
     return (

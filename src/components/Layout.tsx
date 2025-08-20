@@ -19,7 +19,7 @@ export const Layout: React.FC<LayoutProps> = ({
   return (
     <div className="min-h-screen bg-black text-white font-sans">
       {/* Navigation Header */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-gray-700">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b-2 border-gray-700">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-3 sm:py-4">
             <div className="flex items-center gap-4">
@@ -65,7 +65,7 @@ export const Layout: React.FC<LayoutProps> = ({
 
       {/* Footer */}
       {!isHomePage && (
-        <footer className="border-t border-gray-700 py-8 px-4 sm:px-6 lg:px-8">
+        <footer className="border-t-2 border-gray-700 py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <Link
               to="/"

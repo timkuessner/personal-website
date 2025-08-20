@@ -16,6 +16,9 @@ import { UniversityOfCanterburyEngineeringChallenge } from './pages/competitions
 // Project pages
 import { TeReoMaoriRevitalizationGame } from './pages/projects/TeReoMaoriRevitalizationGame';
 
+// Not Found page
+import { NotFoundPage } from './pages/NotFoundPage';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -55,6 +58,11 @@ const router = createBrowserRouter([
   {
     path: "/proj/tereo",
     element: <TeReoMaoriRevitalizationGame />
+  },
+  // Not found route
+  {
+    path: "*",
+    element: <NotFoundPage />
   }
 ]);
 

@@ -24,7 +24,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-gray-700">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b-2 border-gray-700">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3 sm:py-4">
           <h1 className="text-lg sm:text-xl font-bold tracking-tight">
@@ -66,7 +66,7 @@ export const Navigation: React.FC<NavigationProps> = ({
                 <button
                   key={item.id}
                   onClick={() => onNavClick(item.id)}
-                  className={`text-base font-medium py-2 transition-all duration-200 border-b border-transparent hover:text-white ${
+                  className={`text-base font-medium py-2 transition-all duration-200 border-b-2 border-transparent hover:text-white ${
                     activeSection === item.id 
                       ? 'text-white border-white' 
                       : 'text-gray-300'
